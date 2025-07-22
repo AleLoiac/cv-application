@@ -1,0 +1,10 @@
+.resume {
+  border: 2px solid;
+  margin-top: 30px;
+  padding: 2em;
+  border-radius: 40px;
+}
+
+.name {
+  font-size: 2.5em;
+}
