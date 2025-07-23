@@ -8,9 +8,11 @@ input {
   background-color: #1a1a1a;
   transition: border-color 0.25s;
 }
+
 input:hover {
   border-color: #646cff;
 }
+
 input:focus {
   outline: 2px solid #646cff;
 }

@@ -3,6 +3,5 @@
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  margin: 10px auto;
-  width: 400px;
+  margin: 0 auto 10px auto;
 }
