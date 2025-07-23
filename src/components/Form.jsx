@@ -8,25 +8,31 @@ export default function Form() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [generatedResume, setResume] = useState(null);
+  const [showContactSection, setShowContactSection] = useState(true);
+  const [buttonText, setButtonText] = useState("Generate");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setResume(<Resume name={name} email={email} phone={phone} />);
+    setShowContactSection(!showContactSection);
+    setButtonText("Edit");
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <Contact
-          name={name}
-          setName={setName}
-          email={email}
-          setEmail={setEmail}
-          phone={phone}
-          setPhone={setPhone}
-        />
+        {showContactSection ? (
+          <Contact
+            name={name}
+            setName={setName}
+            email={email}
+            setEmail={setEmail}
+            phone={phone}
+            setPhone={setPhone}
+          />
+        ) : null}
         <button type="submit" className="submitBtn">
-          Generate
+          {buttonText}
         </button>
       </form>
       {generatedResume}

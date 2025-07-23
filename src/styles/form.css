@@ -18,7 +18,7 @@ input:focus {
 }
 
 .submitBtn {
-  margin-top: 20px;
+  margin: 20px;
 }
 
 @media (prefers-color-scheme: light) {
