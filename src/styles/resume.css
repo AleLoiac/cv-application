@@ -5,6 +5,22 @@
   flex: 1;
 }
 
+.contacts {
+  margin-bottom: 30px;
+}
+
 .name {
   font-size: 2.5em;
+}
+
+.school {
+  text-align: left;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.schoolInfo {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
 }

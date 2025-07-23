@@ -9,7 +9,8 @@ export default function Contact({
   setPhone,
 }) {
   return (
-    <>
+    <div className="contacts">
+      <h2>Contacts</h2>
       <div className="field">
         <label htmlFor="name">Name: </label>
         <input
@@ -52,6 +53,6 @@ export default function Contact({
           required
         />
       </div>
-    </>
+    </div>
   );
 }

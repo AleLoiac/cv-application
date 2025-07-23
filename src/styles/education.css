@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.newEducation {
+  padding: 0.3em;
+  width: 30px;
+  height: 30px;
+}
