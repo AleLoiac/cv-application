@@ -20,9 +20,11 @@ export default function Resume({
       <div className="education">
         <div className="school">{schoolName}</div>
         <div className="schoolInfo">
-          <div className="titleOfStudy">Title of Study: {titleOfStudy}</div>
+          <div className="titleOfStudy">
+            {titleOfStudy ? "Title of Study: " + titleOfStudy : null}
+          </div>
           <div className="graduationDate">
-            Graduation date: {dateOfGraduation}
+            {dateOfGraduation ? "Graduation date: " + dateOfGraduation : null}
           </div>
         </div>
       </div>
