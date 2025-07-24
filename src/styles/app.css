@@ -21,6 +21,19 @@ input:focus {
   margin: 20px;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.newEducation {
+  padding: 0.3em;
+  width: 30px;
+  height: 30px;
+}
+
 @media (prefers-color-scheme: light) {
   input {
     background-color: #e5e6ff;

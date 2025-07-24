@@ -1,57 +1,38 @@
 import "../styles/education.css";
 
-export default function Education({
-  schoolName,
-  setSchoolName,
-  titleOfStudy,
-  setTitleOfStudy,
-  dateOfGraduation,
-  setDateOfGraduation,
-}) {
+export default function Education({ education, id, onChange }) {
   return (
-    <div className="education">
-      <div className="header">
-        <h2>Education</h2>
-        <button type="button" className="newEducation">
-          +
-        </button>
+    <div className="educationCard">
+      <div className="field">
+        <label htmlFor={`schoolName-${id}`}>School / University: </label>
+        <input
+          type="text"
+          id={`schoolName-${id}`}
+          value={education.schoolName}
+          onChange={(e) => onChange(id, "schoolName", e.target.value)}
+          placeholder="Harvard University"
+        />
       </div>
-      <div className="educationCard">
-        <div className="field">
-          <label htmlFor="schoolName">School / University: </label>
-          <input
-            type="text"
-            id="schoolName"
-            value={schoolName}
-            onChange={(e) => {
-              setSchoolName(e.target.value);
-            }}
-            placeholder="Harvard University"
-          />
-        </div>
-        <div className="field">
-          <label htmlFor="titleOfStudy">Title of study: </label>
-          <input
-            type="text"
-            id="titleOfStudy"
-            value={titleOfStudy}
-            onChange={(e) => {
-              setTitleOfStudy(e.target.value);
-            }}
-            placeholder="Environmental Science and Engineering"
-          />
-        </div>
-        <div className="field">
-          <label htmlFor="dateOfGraduation">Date of graduation: </label>
-          <input
-            type="date"
-            id="dateOfGraduation"
-            value={dateOfGraduation}
-            onChange={(e) => {
-              setDateOfGraduation(e.target.value);
-            }}
-          />
-        </div>
+
+      <div className="field">
+        <label htmlFor={`titleOfStudy-${id}`}>Title of study: </label>
+        <input
+          type="text"
+          id={`titleOfStudy-${id}`}
+          value={education.titleOfStudy}
+          onChange={(e) => onChange(id, "titleOfStudy", e.target.value)}
+          placeholder="Environmental Science and Engineering"
+        />
+      </div>
+
+      <div className="field">
+        <label htmlFor={`dateOfGraduation-${id}`}>Date of graduation: </label>
+        <input
+          type="date"
+          id={`dateOfGraduation-${id}`}
+          value={education.dateOfGraduation}
+          onChange={(e) => onChange(id, "dateOfGraduation", e.target.value)}
+        />
       </div>
     </div>
   );

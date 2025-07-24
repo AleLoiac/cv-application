@@ -1,13 +1,6 @@
 import "../styles/resume.css";
 
-export default function Resume({
-  name,
-  email,
-  phone,
-  schoolName,
-  titleOfStudy,
-  dateOfGraduation,
-}) {
+export default function Resume({ name, email, phone, education }) {
   return (
     <div className="resume">
       <div className="contacts">
@@ -17,17 +10,25 @@ export default function Resume({
         </div>
       </div>
       <hr />
-      <div className="education">
-        <div className="school">{schoolName}</div>
-        <div className="schoolInfo">
-          <div className="titleOfStudy">
-            {titleOfStudy ? "Title of Study: " + titleOfStudy : null}
-          </div>
-          <div className="graduationDate">
-            {dateOfGraduation ? "Graduation date: " + dateOfGraduation : null}
+      {education.map((entry) => (
+        <div key={entry.id}>
+          <div className="education">
+            <div className="school">{entry.schoolName}</div>
+            <div className="schoolInfo">
+              <div className="titleOfStudy">
+                {entry.titleOfStudy
+                  ? "Title of Study: " + entry.titleOfStudy
+                  : null}
+              </div>
+              <div className="graduationDate">
+                {entry.dateOfGraduation
+                  ? "Graduation date: " + entry.dateOfGraduation
+                  : null}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
