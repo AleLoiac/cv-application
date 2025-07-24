@@ -13,18 +13,29 @@
   font-size: 2.5em;
 }
 
-.school {
+.school,
+.company {
   text-align: left;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
-.schoolInfo {
+.schoolInfo,
+.dates {
   display: flex;
   gap: 40px;
   justify-content: space-between;
 }
 
+.dates {
+  margin-bottom: 20px;
+}
+
 .education {
   margin-bottom: 30px;
+}
+
+.jobTitle,
+.responsibilities {
+  text-align: left;
 }
